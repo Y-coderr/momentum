@@ -86,10 +86,38 @@ CMakeFiles/momentum.dir/src/Engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/momentum.dir/src/Engine.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/Engine.cpp" -o CMakeFiles/momentum.dir/src/Engine.cpp.s
 
+CMakeFiles/momentum.dir/src/Particle.cpp.o: CMakeFiles/momentum.dir/flags.make
+CMakeFiles/momentum.dir/src/Particle.cpp.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/src/Particle.cpp
+CMakeFiles/momentum.dir/src/Particle.cpp.o: CMakeFiles/momentum.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/momentum.dir/src/Particle.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/momentum.dir/src/Particle.cpp.o -MF CMakeFiles/momentum.dir/src/Particle.cpp.o.d -o CMakeFiles/momentum.dir/src/Particle.cpp.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/Particle.cpp"
+
+CMakeFiles/momentum.dir/src/Particle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/momentum.dir/src/Particle.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/Particle.cpp" > CMakeFiles/momentum.dir/src/Particle.cpp.i
+
+CMakeFiles/momentum.dir/src/Particle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/momentum.dir/src/Particle.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/Particle.cpp" -o CMakeFiles/momentum.dir/src/Particle.cpp.s
+
+CMakeFiles/momentum.dir/src/Particles.cpp.o: CMakeFiles/momentum.dir/flags.make
+CMakeFiles/momentum.dir/src/Particles.cpp.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/src/Particles.cpp
+CMakeFiles/momentum.dir/src/Particles.cpp.o: CMakeFiles/momentum.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/momentum.dir/src/Particles.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/momentum.dir/src/Particles.cpp.o -MF CMakeFiles/momentum.dir/src/Particles.cpp.o.d -o CMakeFiles/momentum.dir/src/Particles.cpp.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/Particles.cpp"
+
+CMakeFiles/momentum.dir/src/Particles.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/momentum.dir/src/Particles.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/Particles.cpp" > CMakeFiles/momentum.dir/src/Particles.cpp.i
+
+CMakeFiles/momentum.dir/src/Particles.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/momentum.dir/src/Particles.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/Particles.cpp" -o CMakeFiles/momentum.dir/src/Particles.cpp.s
+
 CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o: CMakeFiles/momentum.dir/flags.make
 CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/src/PhysicsBody.cpp
 CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o: CMakeFiles/momentum.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o -MF CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o.d -o CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/PhysicsBody.cpp"
 
 CMakeFiles/momentum.dir/src/PhysicsBody.cpp.i: cmake_force
@@ -103,7 +131,7 @@ CMakeFiles/momentum.dir/src/PhysicsBody.cpp.s: cmake_force
 CMakeFiles/momentum.dir/src/rend/Renderer.cpp.o: CMakeFiles/momentum.dir/flags.make
 CMakeFiles/momentum.dir/src/rend/Renderer.cpp.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/src/rend/Renderer.cpp
 CMakeFiles/momentum.dir/src/rend/Renderer.cpp.o: CMakeFiles/momentum.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/momentum.dir/src/rend/Renderer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/momentum.dir/src/rend/Renderer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/momentum.dir/src/rend/Renderer.cpp.o -MF CMakeFiles/momentum.dir/src/rend/Renderer.cpp.o.d -o CMakeFiles/momentum.dir/src/rend/Renderer.cpp.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/rend/Renderer.cpp"
 
 CMakeFiles/momentum.dir/src/rend/Renderer.cpp.i: cmake_force
@@ -117,7 +145,7 @@ CMakeFiles/momentum.dir/src/rend/Renderer.cpp.s: cmake_force
 CMakeFiles/momentum.dir/src/rend/Shader.cpp.o: CMakeFiles/momentum.dir/flags.make
 CMakeFiles/momentum.dir/src/rend/Shader.cpp.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/src/rend/Shader.cpp
 CMakeFiles/momentum.dir/src/rend/Shader.cpp.o: CMakeFiles/momentum.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/momentum.dir/src/rend/Shader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/momentum.dir/src/rend/Shader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/momentum.dir/src/rend/Shader.cpp.o -MF CMakeFiles/momentum.dir/src/rend/Shader.cpp.o.d -o CMakeFiles/momentum.dir/src/rend/Shader.cpp.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/rend/Shader.cpp"
 
 CMakeFiles/momentum.dir/src/rend/Shader.cpp.i: cmake_force
@@ -131,7 +159,7 @@ CMakeFiles/momentum.dir/src/rend/Shader.cpp.s: cmake_force
 CMakeFiles/momentum.dir/ext/imGui/imgui.cpp.o: CMakeFiles/momentum.dir/flags.make
 CMakeFiles/momentum.dir/ext/imGui/imgui.cpp.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/ext/imGui/imgui.cpp
 CMakeFiles/momentum.dir/ext/imGui/imgui.cpp.o: CMakeFiles/momentum.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/momentum.dir/ext/imGui/imgui.cpp.o -MF CMakeFiles/momentum.dir/ext/imGui/imgui.cpp.o.d -o CMakeFiles/momentum.dir/ext/imGui/imgui.cpp.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/ext/imGui/imgui.cpp"
 
 CMakeFiles/momentum.dir/ext/imGui/imgui.cpp.i: cmake_force
@@ -145,7 +173,7 @@ CMakeFiles/momentum.dir/ext/imGui/imgui.cpp.s: cmake_force
 CMakeFiles/momentum.dir/ext/imGui/imgui_draw.cpp.o: CMakeFiles/momentum.dir/flags.make
 CMakeFiles/momentum.dir/ext/imGui/imgui_draw.cpp.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/ext/imGui/imgui_draw.cpp
 CMakeFiles/momentum.dir/ext/imGui/imgui_draw.cpp.o: CMakeFiles/momentum.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui_draw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui_draw.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/momentum.dir/ext/imGui/imgui_draw.cpp.o -MF CMakeFiles/momentum.dir/ext/imGui/imgui_draw.cpp.o.d -o CMakeFiles/momentum.dir/ext/imGui/imgui_draw.cpp.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/ext/imGui/imgui_draw.cpp"
 
 CMakeFiles/momentum.dir/ext/imGui/imgui_draw.cpp.i: cmake_force
@@ -159,7 +187,7 @@ CMakeFiles/momentum.dir/ext/imGui/imgui_draw.cpp.s: cmake_force
 CMakeFiles/momentum.dir/ext/imGui/imgui_demo.cpp.o: CMakeFiles/momentum.dir/flags.make
 CMakeFiles/momentum.dir/ext/imGui/imgui_demo.cpp.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/ext/imGui/imgui_demo.cpp
 CMakeFiles/momentum.dir/ext/imGui/imgui_demo.cpp.o: CMakeFiles/momentum.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui_demo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui_demo.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/momentum.dir/ext/imGui/imgui_demo.cpp.o -MF CMakeFiles/momentum.dir/ext/imGui/imgui_demo.cpp.o.d -o CMakeFiles/momentum.dir/ext/imGui/imgui_demo.cpp.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/ext/imGui/imgui_demo.cpp"
 
 CMakeFiles/momentum.dir/ext/imGui/imgui_demo.cpp.i: cmake_force
@@ -173,7 +201,7 @@ CMakeFiles/momentum.dir/ext/imGui/imgui_demo.cpp.s: cmake_force
 CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.o: CMakeFiles/momentum.dir/flags.make
 CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/ext/imGui/imgui_tables.cpp
 CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.o: CMakeFiles/momentum.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.o -MF CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.o.d -o CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/ext/imGui/imgui_tables.cpp"
 
 CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.i: cmake_force
@@ -187,7 +215,7 @@ CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.s: cmake_force
 CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.o: CMakeFiles/momentum.dir/flags.make
 CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/ext/imGui/imgui_widgets.cpp
 CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.o: CMakeFiles/momentum.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.o -MF CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.o.d -o CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/ext/imGui/imgui_widgets.cpp"
 
 CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.i: cmake_force
@@ -201,7 +229,7 @@ CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.s: cmake_force
 CMakeFiles/momentum.dir/ext/imGui/imgui_impl_glfw.cpp.o: CMakeFiles/momentum.dir/flags.make
 CMakeFiles/momentum.dir/ext/imGui/imgui_impl_glfw.cpp.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/ext/imGui/imgui_impl_glfw.cpp
 CMakeFiles/momentum.dir/ext/imGui/imgui_impl_glfw.cpp.o: CMakeFiles/momentum.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui_impl_glfw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui_impl_glfw.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/momentum.dir/ext/imGui/imgui_impl_glfw.cpp.o -MF CMakeFiles/momentum.dir/ext/imGui/imgui_impl_glfw.cpp.o.d -o CMakeFiles/momentum.dir/ext/imGui/imgui_impl_glfw.cpp.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/ext/imGui/imgui_impl_glfw.cpp"
 
 CMakeFiles/momentum.dir/ext/imGui/imgui_impl_glfw.cpp.i: cmake_force
@@ -215,7 +243,7 @@ CMakeFiles/momentum.dir/ext/imGui/imgui_impl_glfw.cpp.s: cmake_force
 CMakeFiles/momentum.dir/ext/imGui/imgui_impl_opengl3.cpp.o: CMakeFiles/momentum.dir/flags.make
 CMakeFiles/momentum.dir/ext/imGui/imgui_impl_opengl3.cpp.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/ext/imGui/imgui_impl_opengl3.cpp
 CMakeFiles/momentum.dir/ext/imGui/imgui_impl_opengl3.cpp.o: CMakeFiles/momentum.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui_impl_opengl3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/momentum.dir/ext/imGui/imgui_impl_opengl3.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/momentum.dir/ext/imGui/imgui_impl_opengl3.cpp.o -MF CMakeFiles/momentum.dir/ext/imGui/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/momentum.dir/ext/imGui/imgui_impl_opengl3.cpp.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/ext/imGui/imgui_impl_opengl3.cpp"
 
 CMakeFiles/momentum.dir/ext/imGui/imgui_impl_opengl3.cpp.i: cmake_force
@@ -229,7 +257,7 @@ CMakeFiles/momentum.dir/ext/imGui/imgui_impl_opengl3.cpp.s: cmake_force
 CMakeFiles/momentum.dir/glad.c.o: CMakeFiles/momentum.dir/flags.make
 CMakeFiles/momentum.dir/glad.c.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/glad.c
 CMakeFiles/momentum.dir/glad.c.o: CMakeFiles/momentum.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/momentum.dir/glad.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/momentum.dir/glad.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/momentum.dir/glad.c.o -MF CMakeFiles/momentum.dir/glad.c.o.d -o CMakeFiles/momentum.dir/glad.c.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/glad.c"
 
 CMakeFiles/momentum.dir/glad.c.i: cmake_force
@@ -243,7 +271,7 @@ CMakeFiles/momentum.dir/glad.c.s: cmake_force
 CMakeFiles/momentum.dir/Main.cpp.o: CMakeFiles/momentum.dir/flags.make
 CMakeFiles/momentum.dir/Main.cpp.o: /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/Main.cpp
 CMakeFiles/momentum.dir/Main.cpp.o: CMakeFiles/momentum.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/momentum.dir/Main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/momentum.dir/Main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/momentum.dir/Main.cpp.o -MF CMakeFiles/momentum.dir/Main.cpp.o.d -o CMakeFiles/momentum.dir/Main.cpp.o -c "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/Main.cpp"
 
 CMakeFiles/momentum.dir/Main.cpp.i: cmake_force
@@ -257,6 +285,8 @@ CMakeFiles/momentum.dir/Main.cpp.s: cmake_force
 # Object files for target momentum
 momentum_OBJECTS = \
 "CMakeFiles/momentum.dir/src/Engine.cpp.o" \
+"CMakeFiles/momentum.dir/src/Particle.cpp.o" \
+"CMakeFiles/momentum.dir/src/Particles.cpp.o" \
 "CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o" \
 "CMakeFiles/momentum.dir/src/rend/Renderer.cpp.o" \
 "CMakeFiles/momentum.dir/src/rend/Shader.cpp.o" \
@@ -274,6 +304,8 @@ momentum_OBJECTS = \
 momentum_EXTERNAL_OBJECTS =
 
 momentum: CMakeFiles/momentum.dir/src/Engine.cpp.o
+momentum: CMakeFiles/momentum.dir/src/Particle.cpp.o
+momentum: CMakeFiles/momentum.dir/src/Particles.cpp.o
 momentum: CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o
 momentum: CMakeFiles/momentum.dir/src/rend/Renderer.cpp.o
 momentum: CMakeFiles/momentum.dir/src/rend/Shader.cpp.o
@@ -289,7 +321,7 @@ momentum: CMakeFiles/momentum.dir/Main.cpp.o
 momentum: CMakeFiles/momentum.dir/build.make
 momentum: /opt/homebrew/lib/libglfw.3.4.dylib
 momentum: CMakeFiles/momentum.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable momentum"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable momentum"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/momentum.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

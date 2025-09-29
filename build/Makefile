@@ -369,6 +369,54 @@ src/Engine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/Engine.cpp.s
 .PHONY : src/Engine.cpp.s
 
+src/Particle.o: src/Particle.cpp.o
+.PHONY : src/Particle.o
+
+# target to build an object file
+src/Particle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/Particle.cpp.o
+.PHONY : src/Particle.cpp.o
+
+src/Particle.i: src/Particle.cpp.i
+.PHONY : src/Particle.i
+
+# target to preprocess a source file
+src/Particle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/Particle.cpp.i
+.PHONY : src/Particle.cpp.i
+
+src/Particle.s: src/Particle.cpp.s
+.PHONY : src/Particle.s
+
+# target to generate assembly for a file
+src/Particle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/Particle.cpp.s
+.PHONY : src/Particle.cpp.s
+
+src/Particles.o: src/Particles.cpp.o
+.PHONY : src/Particles.o
+
+# target to build an object file
+src/Particles.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/Particles.cpp.o
+.PHONY : src/Particles.cpp.o
+
+src/Particles.i: src/Particles.cpp.i
+.PHONY : src/Particles.i
+
+# target to preprocess a source file
+src/Particles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/Particles.cpp.i
+.PHONY : src/Particles.cpp.i
+
+src/Particles.s: src/Particles.cpp.s
+.PHONY : src/Particles.s
+
+# target to generate assembly for a file
+src/Particles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/Particles.cpp.s
+.PHONY : src/Particles.cpp.s
+
 src/PhysicsBody.o: src/PhysicsBody.cpp.o
 .PHONY : src/PhysicsBody.o
 
@@ -480,6 +528,12 @@ help:
 	@echo "... src/Engine.o"
 	@echo "... src/Engine.i"
 	@echo "... src/Engine.s"
+	@echo "... src/Particle.o"
+	@echo "... src/Particle.i"
+	@echo "... src/Particle.s"
+	@echo "... src/Particles.o"
+	@echo "... src/Particles.i"
+	@echo "... src/Particles.s"
 	@echo "... src/PhysicsBody.o"
 	@echo "... src/PhysicsBody.i"
 	@echo "... src/PhysicsBody.s"

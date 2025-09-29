@@ -18,6 +18,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/ext/imGui/imgui_tables.cpp" "CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.o" "gcc" "CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.o.d"
   "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/ext/imGui/imgui_widgets.cpp" "CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.o" "gcc" "CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.o.d"
   "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/Engine.cpp" "CMakeFiles/momentum.dir/src/Engine.cpp.o" "gcc" "CMakeFiles/momentum.dir/src/Engine.cpp.o.d"
+  "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/Particle.cpp" "CMakeFiles/momentum.dir/src/Particle.cpp.o" "gcc" "CMakeFiles/momentum.dir/src/Particle.cpp.o.d"
+  "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/Particles.cpp" "CMakeFiles/momentum.dir/src/Particles.cpp.o" "gcc" "CMakeFiles/momentum.dir/src/Particles.cpp.o.d"
   "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/PhysicsBody.cpp" "CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o" "gcc" "CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o.d"
   "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/rend/Renderer.cpp" "CMakeFiles/momentum.dir/src/rend/Renderer.cpp.o" "gcc" "CMakeFiles/momentum.dir/src/rend/Renderer.cpp.o.d"
   "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/src/rend/Shader.cpp" "CMakeFiles/momentum.dir/src/rend/Shader.cpp.o" "gcc" "CMakeFiles/momentum.dir/src/rend/Shader.cpp.o.d"
