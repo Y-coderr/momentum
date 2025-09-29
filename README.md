@@ -41,6 +41,11 @@ A modern 3D physics engine built with OpenGL and C++, featuring real-time physic
 - OpenGL 4.6 compatible GPU
 - Git
 
+## 📷 Output Screenshots
+
+<img width="1470" height="956" alt="Screenshot 2025-09-30 at 12 00 28 AM" src="https://github.com/user-attachments/assets/436122c4-35e8-4c90-8da7-e1ecd902f0ae" />
+
+
 ### 💻 System-Specific Requirements
 
 #### 🍎 macOS
