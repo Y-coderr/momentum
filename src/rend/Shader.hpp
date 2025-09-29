@@ -7,12 +7,13 @@ enum matrix_type {
 class Shader
 {
 	unsigned int m_prog_id;
-	int m_model_loc, m_view_loc, m_pers_loc;
+	int m_model_loc, m_view_loc, m_pers_loc, m_color_loc;
 	bool checkErrors(const unsigned int);
 public:
 	Shader(){}//default
 	Shader(const std::string vertexpath, const std::string fragpath);
 	void upload2GPU(matrix_type, const float*);
+	void setColor(float r, float g, float b, float a = 1.0f);
 	void Activate();
 	~Shader();
 };

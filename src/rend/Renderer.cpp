@@ -246,11 +246,30 @@ void Renderer::run(std::function<void(float)> engineUpdate, std::function <void(
 		imGuiRender();
 		for (auto& entity : *Entities) {
 			e_shader->upload2GPU(MODEL, entity->ConstructTransformMat());
+
+			// Set color based on object type and physical properties
+			if (auto* physBody = dynamic_cast<PhysicsBody*>(entity.get())) {
+				if (physBody->isAsleep()) {
+					// Sleeping objects are darker
+					e_shader->setColor(0.4f, 0.4f, 0.4f);
+				} else {
+					if (entity->Collider == CUBE) {
+						// Cubes are blue-ish
+						e_shader->setColor(0.2f, 0.4f, 0.8f);
+					} else {
+						// Spheres are orange-ish
+						e_shader->setColor(0.8f, 0.4f, 0.2f);
+					}
+				}
+			} else {
+				// Non-physics objects are green-ish
+				e_shader->setColor(0.2f, 0.8f, 0.4f);
+			}
+
 			if (entity->Collider == CUBE) {
 				glBindVertexArray(CUBE_SHAPE_VAO);
 				glDrawElements(GL_TRIANGLES, library->INDICES_COUNT_CUBE, GL_UNSIGNED_INT, nullptr);
-			}
-			else {
+			} else {
 				glBindVertexArray(SPHERE_SHAPE_VAO);
 				glDrawElements(GL_TRIANGLES, library->INDICES_COUNT_SPHERE, GL_UNSIGNED_INT, nullptr);
 			}

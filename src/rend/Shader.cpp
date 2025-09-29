@@ -81,12 +81,15 @@ Shader::Shader(const std::string vertexpath, const std::string fragpath)
 			m_view_loc = glGetUniformLocation(m_prog_id, "ViewMatrix");
 			if (m_view_loc == -1)throw "SHADER > View mat defination not found\n";
 
-			m_pers_loc = glGetUniformLocation(m_prog_id, "ProjMatrix");
-			if (m_pers_loc == -1) {
-				throw std::runtime_error("Perspective matrix definition not found");
-			}
+            m_pers_loc = glGetUniformLocation(m_prog_id, "ProjMatrix");
+            if (m_pers_loc == -1) {
+                throw std::runtime_error("Perspective matrix definition not found");
+            }
 
-			glUseProgram(0);
+            m_color_loc = glGetUniformLocation(m_prog_id, "u_Color");
+            if (m_color_loc == -1) {
+                throw std::runtime_error("Color uniform not found");
+            }			glUseProgram(0);
 			std::cout << "[DEBUG]=> Shader Loaded !\n";
 		}
 		catch (const std::runtime_error& e) {
@@ -121,7 +124,12 @@ void Shader::upload2GPU(matrix_type type, const float* Value)
 
 void Shader::Activate()
 {
-	glUseProgram(m_prog_id);
+    glUseProgram(m_prog_id);
+}
+
+void Shader::setColor(float r, float g, float b, float a)
+{
+    glUniform4f(m_color_loc, r, g, b, a);
 }
 
 Shader::~Shader()

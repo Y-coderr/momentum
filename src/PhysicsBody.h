@@ -59,27 +59,47 @@ public:
 class PhysicsBody :public Body 
 {
 protected:
-	float Mass;
-	//Eigen::Vector3f Point_of_mass;  future me 
-	Eigen::Vector3f Velocity;
-	Eigen::Vector3f Force_accumulator;
-	Eigen::Vector3f Angular_velocity;
-	Eigen::Vector3f Torque_accumulator;
-	bool Influence_gravity;
-	//bool Indestructible;  ye mene moving object which will just exerts force not experience itself
+    float Mass;
+    float Restitution;      // Coefficient of restitution (0 = inelastic, 1 = perfectly elastic)
+    float FrictionStatic;   // Static friction coefficient
+    float FrictionDynamic;  // Dynamic friction coefficient
+    Eigen::Vector3f Velocity;
+    Eigen::Vector3f Force_accumulator;
+    Eigen::Vector3f Angular_velocity;
+    Eigen::Vector3f Torque_accumulator;
+    bool Influence_gravity;
+    bool IsAsleep;          // For optimization: bodies at rest
 
 public:
-	//In C++, if a parent class (Base) requires arguments in its constructor, the child class (Derived) must explicitly call that constructor using an initializer list.
-	PhysicsBody(bool gravity_influnce, float mass, BoundingType type);
-	~PhysicsBody();
+    PhysicsBody(bool gravity_influence, float mass, BoundingType type);
+    ~PhysicsBody();
 
-	void Update(float deltaTime, const float gravity) override;//abhi ke liye gravity only y axis me hogi
-	void ApplyImpulse(const Eigen::Vector3f, const float deltaTime) override;
-	float getInverseMass()const override { return 1/Mass; };
+    // Core physics update methods
+    void Update(float deltaTime, const float gravity) override;
+    void ApplyImpulse(const Eigen::Vector3f impulse, const float deltaTime) override;
+    float getInverseMass() const override { return Mass > 0 ? 1/Mass : 0.0f; }
 
-	Eigen::Vector3f getVelocity()const override{ return Velocity; }
-	void ApplyForceAtPoint(const Eigen::Vector3f, const Eigen::Vector3f);
+    // Velocity and force methods
+    Eigen::Vector3f getVelocity() const override { return Velocity; }
+    void ApplyForceAtPoint(const Eigen::Vector3f force, const Eigen::Vector3f point);
+    void setVelocity(const Eigen::Vector3f& vel) { Velocity = vel; }
 
+    // Material properties
+    float getRestitution() const { return Restitution; }
+    void setRestitution(float e) { Restitution = std::clamp(e, 0.0f, 1.0f); }
+    
+    float getFrictionStatic() const { return FrictionStatic; }
+    void setFrictionStatic(float f) { FrictionStatic = std::max(0.0f, f); }
+    
+    float getFrictionDynamic() const { return FrictionDynamic; }
+    void setFrictionDynamic(float f) { FrictionDynamic = std::max(0.0f, f); }
+
+    // Sleep state management
+    bool isAsleep() const { return IsAsleep; }
+    void setAsleep(bool asleep) { IsAsleep = asleep; }
+    
+    // Force accumulator management
+    void clearForces() { Force_accumulator.setZero(); Torque_accumulator.setZero(); }
 };
 
 

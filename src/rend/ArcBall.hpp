@@ -28,7 +28,9 @@ constexpr float degToRad(float deg) {
 		float FIELD_OF_VIEW;
 		float a_sensitivity = 0.3f;
 		float a_pan_speed = 0.4f;
-		float a_scroll_sensitivity = 0.09f;
+		float a_scroll_sensitivity = 0.5f;  // Increased scroll sensitivity
+		float MIN_DISTANCE = 1.0f;         // Minimum zoom distance
+		float MAX_DISTANCE = 20.0f;        // Maximum zoom distance
 
 
 		void ProcMouseOrbit(float dx, float dy) {
@@ -58,7 +60,18 @@ constexpr float degToRad(float deg) {
 
 
 		void ProcMouseScroll(float dy) {
-			DIST_FROM_TARGET = std::max(0.1f, DIST_FROM_TARGET - dy);
+			// Apply non-linear zoom for smoother control
+			float zoomFactor = 1.0f + std::abs(dy);
+			if (dy > 0) {
+				// Zooming in
+				DIST_FROM_TARGET /= zoomFactor;
+			} else {
+				// Zooming out
+				DIST_FROM_TARGET *= zoomFactor;
+			}
+			
+			// Clamp distance between MIN_DISTANCE and MAX_DISTANCE
+			DIST_FROM_TARGET = std::clamp(DIST_FROM_TARGET, MIN_DISTANCE, MAX_DISTANCE);
 			RecalcPos();
 		}
 

@@ -72,16 +72,19 @@ float* Body::ConstructTransformMat()
 		
 }
 //====================================================================
-PhysicsBody::PhysicsBody(bool gravity_influnce, float mass , BoundingType type):
-	Body(type),
-	Influence_gravity(gravity_influnce),
-	Mass(mass),
-	Velocity(Eigen::Vector3f::Zero()),
-	Angular_velocity(Eigen::Vector3f::Zero()),
-	Force_accumulator(Eigen::Vector3f::Zero()),
-	Torque_accumulator(Eigen::Vector3f::Zero())
+PhysicsBody::PhysicsBody(bool gravity_influence, float mass, BoundingType type):
+    Body(type),
+    Mass(mass),
+    Restitution(0.5f),           // Default medium elasticity
+    FrictionStatic(0.6f),        // Default static friction
+    FrictionDynamic(0.4f),       // Default dynamic friction
+    Velocity(Eigen::Vector3f::Zero()),
+    Force_accumulator(Eigen::Vector3f::Zero()),
+    Angular_velocity(Eigen::Vector3f::Zero()),
+    Torque_accumulator(Eigen::Vector3f::Zero()),
+    Influence_gravity(gravity_influence),
+    IsAsleep(false)
 {
-	
 }
 
 PhysicsBody::~PhysicsBody()
