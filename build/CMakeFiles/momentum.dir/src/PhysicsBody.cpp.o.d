@@ -1,6 +1,6 @@
-CMakeFiles/PhysXine.dir/src/PhysicsBody.cpp.o: \
-  /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/PhysXine/src/PhysicsBody.cpp \
-  /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/PhysXine/src/PhysicsBody.h \
+CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o: \
+  /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/src/PhysicsBody.cpp \
+  /Users/yashkadam/Programs\ And\ Projects/CPP_Projects/momentum/src/PhysicsBody.h \
   /opt/homebrew/include/eigen3/Eigen/Dense \
   /opt/homebrew/include/eigen3/Eigen/Core \
   /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \

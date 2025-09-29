@@ -1,5 +1,5 @@
-#version 460 core
-layout(location =0)in vec3 vPos;
+#version 330 core
+in vec3 vPos;
 
 
 uniform mat4 ModelMatrix;

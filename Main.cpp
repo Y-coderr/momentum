@@ -2,16 +2,23 @@
 #include "src/Engine.hpp"
 
 int main() {
+	std::cout << "Starting application..." << std::endl;
 	
-	Engine Aman;
-	Aman.Start();
+	Engine engine;
+	std::cout << "Engine created" << std::endl;
+	
+	engine.Start();
+	std::cout << "Engine started" << std::endl;
 
-	Renderer Gupta(Aman.getEntitiesPtr());//i will feed the main scene to Renderer so it can access data fast
-	auto update = [&](float dt) { Aman.UpdateLoop(dt); };
-	auto drawUI = [&]() { Aman.imGuiDraw_eng(); };
+	std::cout << "Creating renderer..." << std::endl;
+	Renderer renderer(engine.getEntitiesPtr()); //i will feed the main scene to Renderer so it can access data fast
+	std::cout << "Renderer created" << std::endl;
 
-	Gupta.run(update, drawUI);
+	auto update = [&](float dt) { engine.UpdateLoop(dt); };
+	auto drawUI = [&]() { engine.imGuiDraw_eng(); };
 
+	std::cout << "Starting renderer..." << std::endl;
+	renderer.run(update, drawUI);
 	
 	return 0;
 }

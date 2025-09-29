@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/yashkadam/Programs And Projects/CPP_Projects/PhysXine"
+CMAKE_SOURCE_DIR = "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/yashkadam/Programs And Projects/CPP_Projects/PhysXine/build"
+CMAKE_BINARY_DIR = "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/yashkadam/Programs And Projects/CPP_Projects/PhysXine/build/CMakeFiles" "/Users/yashkadam/Programs And Projects/CPP_Projects/PhysXine/build//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/yashkadam/Programs And Projects/CPP_Projects/PhysXine/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -117,144 +117,240 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named PhysXine
+# Target rules for targets named momentum
 
 # Build rule for target.
-PhysXine: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PhysXine
-.PHONY : PhysXine
+momentum: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 momentum
+.PHONY : momentum
 
 # fast build rule for target.
-PhysXine/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/build
-.PHONY : PhysXine/fast
+momentum/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/build
+.PHONY : momentum/fast
 
-ext/imgui/imgui.o: ext/imgui/imgui.cpp.o
-.PHONY : ext/imgui/imgui.o
-
-# target to build an object file
-ext/imgui/imgui.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui.cpp.o
-.PHONY : ext/imgui/imgui.cpp.o
-
-ext/imgui/imgui.i: ext/imgui/imgui.cpp.i
-.PHONY : ext/imgui/imgui.i
-
-# target to preprocess a source file
-ext/imgui/imgui.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui.cpp.i
-.PHONY : ext/imgui/imgui.cpp.i
-
-ext/imgui/imgui.s: ext/imgui/imgui.cpp.s
-.PHONY : ext/imgui/imgui.s
-
-# target to generate assembly for a file
-ext/imgui/imgui.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui.cpp.s
-.PHONY : ext/imgui/imgui.cpp.s
-
-ext/imgui/imgui_demo.o: ext/imgui/imgui_demo.cpp.o
-.PHONY : ext/imgui/imgui_demo.o
+Main.o: Main.cpp.o
+.PHONY : Main.o
 
 # target to build an object file
-ext/imgui/imgui_demo.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui_demo.cpp.o
-.PHONY : ext/imgui/imgui_demo.cpp.o
+Main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/Main.cpp.o
+.PHONY : Main.cpp.o
 
-ext/imgui/imgui_demo.i: ext/imgui/imgui_demo.cpp.i
-.PHONY : ext/imgui/imgui_demo.i
+Main.i: Main.cpp.i
+.PHONY : Main.i
 
 # target to preprocess a source file
-ext/imgui/imgui_demo.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui_demo.cpp.i
-.PHONY : ext/imgui/imgui_demo.cpp.i
+Main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/Main.cpp.i
+.PHONY : Main.cpp.i
 
-ext/imgui/imgui_demo.s: ext/imgui/imgui_demo.cpp.s
-.PHONY : ext/imgui/imgui_demo.s
+Main.s: Main.cpp.s
+.PHONY : Main.s
 
 # target to generate assembly for a file
-ext/imgui/imgui_demo.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui_demo.cpp.s
-.PHONY : ext/imgui/imgui_demo.cpp.s
+Main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/Main.cpp.s
+.PHONY : Main.cpp.s
 
-ext/imgui/imgui_draw.o: ext/imgui/imgui_draw.cpp.o
-.PHONY : ext/imgui/imgui_draw.o
+ext/imGui/imgui.o: ext/imGui/imgui.cpp.o
+.PHONY : ext/imGui/imgui.o
 
 # target to build an object file
-ext/imgui/imgui_draw.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui_draw.cpp.o
-.PHONY : ext/imgui/imgui_draw.cpp.o
+ext/imGui/imgui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui.cpp.o
+.PHONY : ext/imGui/imgui.cpp.o
 
-ext/imgui/imgui_draw.i: ext/imgui/imgui_draw.cpp.i
-.PHONY : ext/imgui/imgui_draw.i
+ext/imGui/imgui.i: ext/imGui/imgui.cpp.i
+.PHONY : ext/imGui/imgui.i
 
 # target to preprocess a source file
-ext/imgui/imgui_draw.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui_draw.cpp.i
-.PHONY : ext/imgui/imgui_draw.cpp.i
+ext/imGui/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui.cpp.i
+.PHONY : ext/imGui/imgui.cpp.i
 
-ext/imgui/imgui_draw.s: ext/imgui/imgui_draw.cpp.s
-.PHONY : ext/imgui/imgui_draw.s
+ext/imGui/imgui.s: ext/imGui/imgui.cpp.s
+.PHONY : ext/imGui/imgui.s
 
 # target to generate assembly for a file
-ext/imgui/imgui_draw.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui_draw.cpp.s
-.PHONY : ext/imgui/imgui_draw.cpp.s
+ext/imGui/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui.cpp.s
+.PHONY : ext/imGui/imgui.cpp.s
 
-ext/imgui/imgui_tables.o: ext/imgui/imgui_tables.cpp.o
-.PHONY : ext/imgui/imgui_tables.o
+ext/imGui/imgui_demo.o: ext/imGui/imgui_demo.cpp.o
+.PHONY : ext/imGui/imgui_demo.o
 
 # target to build an object file
-ext/imgui/imgui_tables.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui_tables.cpp.o
-.PHONY : ext/imgui/imgui_tables.cpp.o
+ext/imGui/imgui_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_demo.cpp.o
+.PHONY : ext/imGui/imgui_demo.cpp.o
 
-ext/imgui/imgui_tables.i: ext/imgui/imgui_tables.cpp.i
-.PHONY : ext/imgui/imgui_tables.i
+ext/imGui/imgui_demo.i: ext/imGui/imgui_demo.cpp.i
+.PHONY : ext/imGui/imgui_demo.i
 
 # target to preprocess a source file
-ext/imgui/imgui_tables.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui_tables.cpp.i
-.PHONY : ext/imgui/imgui_tables.cpp.i
+ext/imGui/imgui_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_demo.cpp.i
+.PHONY : ext/imGui/imgui_demo.cpp.i
 
-ext/imgui/imgui_tables.s: ext/imgui/imgui_tables.cpp.s
-.PHONY : ext/imgui/imgui_tables.s
+ext/imGui/imgui_demo.s: ext/imGui/imgui_demo.cpp.s
+.PHONY : ext/imGui/imgui_demo.s
 
 # target to generate assembly for a file
-ext/imgui/imgui_tables.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui_tables.cpp.s
-.PHONY : ext/imgui/imgui_tables.cpp.s
+ext/imGui/imgui_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_demo.cpp.s
+.PHONY : ext/imGui/imgui_demo.cpp.s
 
-ext/imgui/imgui_widgets.o: ext/imgui/imgui_widgets.cpp.o
-.PHONY : ext/imgui/imgui_widgets.o
+ext/imGui/imgui_draw.o: ext/imGui/imgui_draw.cpp.o
+.PHONY : ext/imGui/imgui_draw.o
 
 # target to build an object file
-ext/imgui/imgui_widgets.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui_widgets.cpp.o
-.PHONY : ext/imgui/imgui_widgets.cpp.o
+ext/imGui/imgui_draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_draw.cpp.o
+.PHONY : ext/imGui/imgui_draw.cpp.o
 
-ext/imgui/imgui_widgets.i: ext/imgui/imgui_widgets.cpp.i
-.PHONY : ext/imgui/imgui_widgets.i
+ext/imGui/imgui_draw.i: ext/imGui/imgui_draw.cpp.i
+.PHONY : ext/imGui/imgui_draw.i
 
 # target to preprocess a source file
-ext/imgui/imgui_widgets.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui_widgets.cpp.i
-.PHONY : ext/imgui/imgui_widgets.cpp.i
+ext/imGui/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_draw.cpp.i
+.PHONY : ext/imGui/imgui_draw.cpp.i
 
-ext/imgui/imgui_widgets.s: ext/imgui/imgui_widgets.cpp.s
-.PHONY : ext/imgui/imgui_widgets.s
+ext/imGui/imgui_draw.s: ext/imGui/imgui_draw.cpp.s
+.PHONY : ext/imGui/imgui_draw.s
 
 # target to generate assembly for a file
-ext/imgui/imgui_widgets.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/ext/imgui/imgui_widgets.cpp.s
-.PHONY : ext/imgui/imgui_widgets.cpp.s
+ext/imGui/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_draw.cpp.s
+.PHONY : ext/imGui/imgui_draw.cpp.s
+
+ext/imGui/imgui_impl_glfw.o: ext/imGui/imgui_impl_glfw.cpp.o
+.PHONY : ext/imGui/imgui_impl_glfw.o
+
+# target to build an object file
+ext/imGui/imgui_impl_glfw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_impl_glfw.cpp.o
+.PHONY : ext/imGui/imgui_impl_glfw.cpp.o
+
+ext/imGui/imgui_impl_glfw.i: ext/imGui/imgui_impl_glfw.cpp.i
+.PHONY : ext/imGui/imgui_impl_glfw.i
+
+# target to preprocess a source file
+ext/imGui/imgui_impl_glfw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_impl_glfw.cpp.i
+.PHONY : ext/imGui/imgui_impl_glfw.cpp.i
+
+ext/imGui/imgui_impl_glfw.s: ext/imGui/imgui_impl_glfw.cpp.s
+.PHONY : ext/imGui/imgui_impl_glfw.s
+
+# target to generate assembly for a file
+ext/imGui/imgui_impl_glfw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_impl_glfw.cpp.s
+.PHONY : ext/imGui/imgui_impl_glfw.cpp.s
+
+ext/imGui/imgui_impl_opengl3.o: ext/imGui/imgui_impl_opengl3.cpp.o
+.PHONY : ext/imGui/imgui_impl_opengl3.o
+
+# target to build an object file
+ext/imGui/imgui_impl_opengl3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_impl_opengl3.cpp.o
+.PHONY : ext/imGui/imgui_impl_opengl3.cpp.o
+
+ext/imGui/imgui_impl_opengl3.i: ext/imGui/imgui_impl_opengl3.cpp.i
+.PHONY : ext/imGui/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+ext/imGui/imgui_impl_opengl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_impl_opengl3.cpp.i
+.PHONY : ext/imGui/imgui_impl_opengl3.cpp.i
+
+ext/imGui/imgui_impl_opengl3.s: ext/imGui/imgui_impl_opengl3.cpp.s
+.PHONY : ext/imGui/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+ext/imGui/imgui_impl_opengl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_impl_opengl3.cpp.s
+.PHONY : ext/imGui/imgui_impl_opengl3.cpp.s
+
+ext/imGui/imgui_tables.o: ext/imGui/imgui_tables.cpp.o
+.PHONY : ext/imGui/imgui_tables.o
+
+# target to build an object file
+ext/imGui/imgui_tables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.o
+.PHONY : ext/imGui/imgui_tables.cpp.o
+
+ext/imGui/imgui_tables.i: ext/imGui/imgui_tables.cpp.i
+.PHONY : ext/imGui/imgui_tables.i
+
+# target to preprocess a source file
+ext/imGui/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.i
+.PHONY : ext/imGui/imgui_tables.cpp.i
+
+ext/imGui/imgui_tables.s: ext/imGui/imgui_tables.cpp.s
+.PHONY : ext/imGui/imgui_tables.s
+
+# target to generate assembly for a file
+ext/imGui/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_tables.cpp.s
+.PHONY : ext/imGui/imgui_tables.cpp.s
+
+ext/imGui/imgui_widgets.o: ext/imGui/imgui_widgets.cpp.o
+.PHONY : ext/imGui/imgui_widgets.o
+
+# target to build an object file
+ext/imGui/imgui_widgets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.o
+.PHONY : ext/imGui/imgui_widgets.cpp.o
+
+ext/imGui/imgui_widgets.i: ext/imGui/imgui_widgets.cpp.i
+.PHONY : ext/imGui/imgui_widgets.i
+
+# target to preprocess a source file
+ext/imGui/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.i
+.PHONY : ext/imGui/imgui_widgets.cpp.i
+
+ext/imGui/imgui_widgets.s: ext/imGui/imgui_widgets.cpp.s
+.PHONY : ext/imGui/imgui_widgets.s
+
+# target to generate assembly for a file
+ext/imGui/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/ext/imGui/imgui_widgets.cpp.s
+.PHONY : ext/imGui/imgui_widgets.cpp.s
+
+glad.o: glad.c.o
+.PHONY : glad.o
+
+# target to build an object file
+glad.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/glad.c.o
+.PHONY : glad.c.o
+
+glad.i: glad.c.i
+.PHONY : glad.i
+
+# target to preprocess a source file
+glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/glad.c.i
+.PHONY : glad.c.i
+
+glad.s: glad.c.s
+.PHONY : glad.s
+
+# target to generate assembly for a file
+glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/glad.c.s
+.PHONY : glad.c.s
 
 src/Engine.o: src/Engine.cpp.o
 .PHONY : src/Engine.o
 
 # target to build an object file
 src/Engine.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/src/Engine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/Engine.cpp.o
 .PHONY : src/Engine.cpp.o
 
 src/Engine.i: src/Engine.cpp.i
@@ -262,7 +358,7 @@ src/Engine.i: src/Engine.cpp.i
 
 # target to preprocess a source file
 src/Engine.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/src/Engine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/Engine.cpp.i
 .PHONY : src/Engine.cpp.i
 
 src/Engine.s: src/Engine.cpp.s
@@ -270,7 +366,7 @@ src/Engine.s: src/Engine.cpp.s
 
 # target to generate assembly for a file
 src/Engine.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/src/Engine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/Engine.cpp.s
 .PHONY : src/Engine.cpp.s
 
 src/PhysicsBody.o: src/PhysicsBody.cpp.o
@@ -278,7 +374,7 @@ src/PhysicsBody.o: src/PhysicsBody.cpp.o
 
 # target to build an object file
 src/PhysicsBody.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/src/PhysicsBody.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/PhysicsBody.cpp.o
 .PHONY : src/PhysicsBody.cpp.o
 
 src/PhysicsBody.i: src/PhysicsBody.cpp.i
@@ -286,7 +382,7 @@ src/PhysicsBody.i: src/PhysicsBody.cpp.i
 
 # target to preprocess a source file
 src/PhysicsBody.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/src/PhysicsBody.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/PhysicsBody.cpp.i
 .PHONY : src/PhysicsBody.cpp.i
 
 src/PhysicsBody.s: src/PhysicsBody.cpp.s
@@ -294,7 +390,7 @@ src/PhysicsBody.s: src/PhysicsBody.cpp.s
 
 # target to generate assembly for a file
 src/PhysicsBody.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/src/PhysicsBody.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/PhysicsBody.cpp.s
 .PHONY : src/PhysicsBody.cpp.s
 
 src/rend/Renderer.o: src/rend/Renderer.cpp.o
@@ -302,7 +398,7 @@ src/rend/Renderer.o: src/rend/Renderer.cpp.o
 
 # target to build an object file
 src/rend/Renderer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/src/rend/Renderer.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/rend/Renderer.cpp.o
 .PHONY : src/rend/Renderer.cpp.o
 
 src/rend/Renderer.i: src/rend/Renderer.cpp.i
@@ -310,7 +406,7 @@ src/rend/Renderer.i: src/rend/Renderer.cpp.i
 
 # target to preprocess a source file
 src/rend/Renderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/src/rend/Renderer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/rend/Renderer.cpp.i
 .PHONY : src/rend/Renderer.cpp.i
 
 src/rend/Renderer.s: src/rend/Renderer.cpp.s
@@ -318,7 +414,7 @@ src/rend/Renderer.s: src/rend/Renderer.cpp.s
 
 # target to generate assembly for a file
 src/rend/Renderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/src/rend/Renderer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/rend/Renderer.cpp.s
 .PHONY : src/rend/Renderer.cpp.s
 
 src/rend/Shader.o: src/rend/Shader.cpp.o
@@ -326,7 +422,7 @@ src/rend/Shader.o: src/rend/Shader.cpp.o
 
 # target to build an object file
 src/rend/Shader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/src/rend/Shader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/rend/Shader.cpp.o
 .PHONY : src/rend/Shader.cpp.o
 
 src/rend/Shader.i: src/rend/Shader.cpp.i
@@ -334,7 +430,7 @@ src/rend/Shader.i: src/rend/Shader.cpp.i
 
 # target to preprocess a source file
 src/rend/Shader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/src/rend/Shader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/rend/Shader.cpp.i
 .PHONY : src/rend/Shader.cpp.i
 
 src/rend/Shader.s: src/rend/Shader.cpp.s
@@ -342,7 +438,7 @@ src/rend/Shader.s: src/rend/Shader.cpp.s
 
 # target to generate assembly for a file
 src/rend/Shader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PhysXine.dir/build.make CMakeFiles/PhysXine.dir/src/rend/Shader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/momentum.dir/build.make CMakeFiles/momentum.dir/src/rend/Shader.cpp.s
 .PHONY : src/rend/Shader.cpp.s
 
 # Help Target
@@ -353,22 +449,34 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... PhysXine"
-	@echo "... ext/imgui/imgui.o"
-	@echo "... ext/imgui/imgui.i"
-	@echo "... ext/imgui/imgui.s"
-	@echo "... ext/imgui/imgui_demo.o"
-	@echo "... ext/imgui/imgui_demo.i"
-	@echo "... ext/imgui/imgui_demo.s"
-	@echo "... ext/imgui/imgui_draw.o"
-	@echo "... ext/imgui/imgui_draw.i"
-	@echo "... ext/imgui/imgui_draw.s"
-	@echo "... ext/imgui/imgui_tables.o"
-	@echo "... ext/imgui/imgui_tables.i"
-	@echo "... ext/imgui/imgui_tables.s"
-	@echo "... ext/imgui/imgui_widgets.o"
-	@echo "... ext/imgui/imgui_widgets.i"
-	@echo "... ext/imgui/imgui_widgets.s"
+	@echo "... momentum"
+	@echo "... Main.o"
+	@echo "... Main.i"
+	@echo "... Main.s"
+	@echo "... ext/imGui/imgui.o"
+	@echo "... ext/imGui/imgui.i"
+	@echo "... ext/imGui/imgui.s"
+	@echo "... ext/imGui/imgui_demo.o"
+	@echo "... ext/imGui/imgui_demo.i"
+	@echo "... ext/imGui/imgui_demo.s"
+	@echo "... ext/imGui/imgui_draw.o"
+	@echo "... ext/imGui/imgui_draw.i"
+	@echo "... ext/imGui/imgui_draw.s"
+	@echo "... ext/imGui/imgui_impl_glfw.o"
+	@echo "... ext/imGui/imgui_impl_glfw.i"
+	@echo "... ext/imGui/imgui_impl_glfw.s"
+	@echo "... ext/imGui/imgui_impl_opengl3.o"
+	@echo "... ext/imGui/imgui_impl_opengl3.i"
+	@echo "... ext/imGui/imgui_impl_opengl3.s"
+	@echo "... ext/imGui/imgui_tables.o"
+	@echo "... ext/imGui/imgui_tables.i"
+	@echo "... ext/imGui/imgui_tables.s"
+	@echo "... ext/imGui/imgui_widgets.o"
+	@echo "... ext/imGui/imgui_widgets.i"
+	@echo "... ext/imGui/imgui_widgets.s"
+	@echo "... glad.o"
+	@echo "... glad.i"
+	@echo "... glad.s"
 	@echo "... src/Engine.o"
 	@echo "... src/Engine.i"
 	@echo "... src/Engine.s"

@@ -7,10 +7,14 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/Users/yashkadam/Programs And Projects/CPP_Projects/PhysXine/CMakeLists.txt"
+  "/Users/yashkadam/Programs And Projects/CPP_Projects/momentum/CMakeLists.txt"
   "CMakeFiles/4.1.1/CMakeCCompiler.cmake"
   "CMakeFiles/4.1.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.1.1/CMakeSystem.cmake"
+  "/opt/homebrew/lib/cmake/glfw3/glfw3Config.cmake"
+  "/opt/homebrew/lib/cmake/glfw3/glfw3ConfigVersion.cmake"
+  "/opt/homebrew/lib/cmake/glfw3/glfw3Targets-release.cmake"
+  "/opt/homebrew/lib/cmake/glfw3/glfw3Targets.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeCCompiler.cmake.in"
   "/opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c"
   "/opt/homebrew/share/cmake/Modules/CMakeCInformation.cmake"
@@ -27,6 +31,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerSupport.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeFindBinUtils.cmake"
+  "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeGenericSystem.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeInitializeConfigs.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeLanguageInformation.cmake"
@@ -40,6 +45,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeTestCompilerCommon.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeUnixFindMake.cmake"
+  "/opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake"
+  "/opt/homebrew/share/cmake/Modules/CheckIncludeFile.cmake"
+  "/opt/homebrew/share/cmake/Modules/CheckLibraryExists.cmake"
   "/opt/homebrew/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake"
   "/opt/homebrew/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
   "/opt/homebrew/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake"
@@ -100,12 +108,17 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/share/cmake/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake"
   "/opt/homebrew/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
   "/opt/homebrew/share/cmake/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
+  "/opt/homebrew/share/cmake/Modules/FindOpenGL.cmake"
+  "/opt/homebrew/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+  "/opt/homebrew/share/cmake/Modules/FindPackageMessage.cmake"
+  "/opt/homebrew/share/cmake/Modules/FindThreads.cmake"
   "/opt/homebrew/share/cmake/Modules/Internal/CMakeCLinkerInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/Internal/CMakeCXXLinkerInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/Internal/CMakeCommonLinkerInformation.cmake"
   "/opt/homebrew/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake"
   "/opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCLinker.cmake"
   "/opt/homebrew/share/cmake/Modules/Internal/CMakeInspectCXXLinker.cmake"
+  "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake"
   "/opt/homebrew/share/cmake/Modules/Internal/FeatureTesting.cmake"
   "/opt/homebrew/share/cmake/Modules/Linker/AppleClang-C.cmake"
   "/opt/homebrew/share/cmake/Modules/Linker/AppleClang-CXX.cmake"
@@ -144,5 +157,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/PhysXine.dir/DependInfo.cmake"
+  "CMakeFiles/momentum.dir/DependInfo.cmake"
   )

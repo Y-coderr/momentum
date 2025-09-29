@@ -85,10 +85,15 @@ public:
     size_t INDICES_COUNT_SPHERE;
 
     MeshLibrary() {
+        std::cout << "Creating cube mesh..." << std::endl;
         Cube_shape_vertex = std::make_unique<Mesh>(Mesh::createCUBE());
         INDICES_COUNT_CUBE = Cube_shape_vertex->indices.size();
+        std::cout << "Cube mesh created with " << INDICES_COUNT_CUBE << " indices" << std::endl;
+        
+        std::cout << "Creating sphere mesh..." << std::endl;
         Sphere_shape_vertex = std::make_unique<Mesh>(Mesh::createSPHERE());
         INDICES_COUNT_SPHERE = Sphere_shape_vertex->indices.size();
+        std::cout << "Sphere mesh created with " << INDICES_COUNT_SPHERE << " indices" << std::endl;
     }
     
 };

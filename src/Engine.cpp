@@ -2,6 +2,12 @@
 #include "imgui.h"
 #include <iostream>
 
+Engine::Engine() {
+    Entities = std::make_shared<std::vector<std::unique_ptr<Body>>>();
+}
+
+Engine::~Engine() {}
+
 bool Engine::detectAABB(const AxisBox& box1,const AxisBox& box2 )
 {
     return (box1.vMax.x() >= box2.vMin.x() && box1.vMin.x() <= box2.vMax.x() &&
@@ -96,22 +102,42 @@ void Engine::PenetrationResolution(std::unique_ptr<Body>& ent_A, std::unique_ptr
 
 }
 
-Engine::Engine():Entities(std::make_shared<std::vector<std::unique_ptr<Body>>>())
-{
-}
-
 void Engine::Start()
 {
-    Entities->emplace_back(std::make_unique<Body>(CUBE));
-    //Entities->emplace_back(std::make_unique<Body>(SPHERE));
-    Entities->emplace_back(std::make_unique<PhysicsBody>(false, 1.0, CUBE));
-    Entities->emplace_back(std::make_unique<PhysicsBody>(true, 1.0, CUBE));
-    (*Entities)[0]->setPosition(Eigen::Vector3f(0.0f, -2.0f, 0.0f));
+    // Create a ground plane (large cube) - static, no physics
+    auto ground = std::make_unique<Body>(CUBE);
+    ground->setScale(Eigen::Vector3f(10.0f, 0.5f, 10.0f));  // Make it wide and flat
+    ground->setPosition(Eigen::Vector3f(0.0f, -5.0f, 0.0f));  // Move it down
+    Entities->push_back(std::move(ground));
 
-    (*Entities)[2]->setPosition(Eigen::Vector3f(0.0f, 10.0f, 0.0f));
+    // Create some dynamic cubes with physics
+    for (int i = 0; i < 3; i++) {
+        auto cube = std::make_unique<PhysicsBody>(true, 1.0f, CUBE);  // Mass = 1.0, affected by gravity
+        cube->setScale(Eigen::Vector3f(0.5f, 0.5f, 0.5f));
+        cube->setPosition(Eigen::Vector3f(-2.0f + i * 2.0f, 2.0f, 0.0f));
+        // Add some initial velocity
+        cube->ApplyForceAtPoint(Eigen::Vector3f(0.0f, 0.0f, 5.0f), Eigen::Vector3f::Zero());
+        Entities->push_back(std::move(cube));
+    }
+
+    // Create some spheres with physics
+    for (int i = 0; i < 3; i++) {
+        auto sphere = std::make_unique<PhysicsBody>(true, 0.8f, SPHERE);  // Mass = 0.8, affected by gravity
+        sphere->setScale(Eigen::Vector3f(0.4f, 0.4f, 0.4f));
+        sphere->setPosition(Eigen::Vector3f(-2.0f + i * 2.0f, 4.0f, -2.0f));
+        // Add some initial velocity
+        sphere->ApplyForceAtPoint(Eigen::Vector3f(1.0f, 0.0f, 1.0f), Eigen::Vector3f::Zero());
+        Entities->push_back(std::move(sphere));
+    }
+
+    // Create a larger sphere with physics
+    auto bigSphere = std::make_unique<PhysicsBody>(true, 5.0f, SPHERE);  // Mass = 5.0, affected by gravity
+    bigSphere->setScale(Eigen::Vector3f(0.8f, 0.8f, 0.8f));
+    bigSphere->setPosition(Eigen::Vector3f(0.0f, 1.0f, -4.0f));
+    // Add some initial velocity
+    bigSphere->ApplyForceAtPoint(Eigen::Vector3f(0.0f, 0.0f, 8.0f), Eigen::Vector3f::Zero());
+    Entities->push_back(std::move(bigSphere));
 }
-
-Engine::~Engine(){}
 
 void Engine::UpdateLoop(const float deltaTime)
 {

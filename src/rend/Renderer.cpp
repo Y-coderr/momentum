@@ -64,7 +64,7 @@ void Renderer::imGuiInit()
 	}
 
 	ImGui_ImplGlfw_InitForOpenGL(window, true);
-	ImGui_ImplOpenGL3_Init("#version 460");
+	ImGui_ImplOpenGL3_Init("#version 330");
 
 }
 
@@ -125,20 +125,59 @@ void Renderer::setupBuffers()
 }
 
 
-Renderer::Renderer(std::shared_ptr<std::vector<std::unique_ptr<Body>>> Ent):Entities(Ent)
+Renderer::Renderer(std::shared_ptr<std::vector<std::unique_ptr<Body>>> Ent) : Entities(Ent)
 {
-	//init glfw
-	glfwInit();
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);//core since i m pro ;}
-	//create win and set it as primary space to use gl
-	window = glfwCreateWindow(WIN_SIZE[0], WIN_SIZE[1], "PISICS Engine", nullptr, nullptr);
-	glfwMakeContextCurrent(window);
-	//load gl functions 
-	gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-	glEnable(GL_DEPTH_TEST);
-	glViewport(0, 0, WIN_SIZE[0], WIN_SIZE[1]);
+    library = new MeshLibrary();
+    library->Cube_shape_vertex = std::make_unique<Mesh>(Mesh::createCUBE());
+    library->Sphere_shape_vertex = std::make_unique<Mesh>(Mesh::createSPHERE());
+    library->INDICES_COUNT_CUBE = library->Cube_shape_vertex->indices.size();
+    library->INDICES_COUNT_SPHERE = library->Sphere_shape_vertex->indices.size();
+    
+    std::cout << "Initializing GLFW..." << std::endl;
+    if (!glfwInit()) {
+        std::cerr << "Failed to initialize GLFW" << std::endl;
+        throw std::runtime_error("Failed to initialize GLFW");
+    }
+
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+
+    std::cout << "Creating window..." << std::endl;
+    window = glfwCreateWindow(WIN_SIZE[0], WIN_SIZE[1], "momentum", nullptr, nullptr);
+    if (!window) {
+        std::cerr << "Failed to create GLFW window" << std::endl;
+        glfwTerminate();
+        throw std::runtime_error("Failed to create GLFW window");
+    }
+
+    glfwMakeContextCurrent(window);
+    // Initialize GLFW with more compatible OpenGL version
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+
+    std::cout << "Creating window..." << std::endl;
+    window = glfwCreateWindow(WIN_SIZE[0], WIN_SIZE[1], "momentum", nullptr, nullptr);
+    if (!window) {
+        std::cerr << "Failed to create GLFW window" << std::endl;
+        glfwTerminate();
+        throw std::runtime_error("Failed to create GLFW window");
+    }
+
+    glfwMakeContextCurrent(window);
+    
+    std::cout << "Loading GLAD..." << std::endl;
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+        std::cerr << "Failed to initialize GLAD" << std::endl;
+        glfwTerminate();
+        throw std::runtime_error("Failed to initialize GLAD");
+    }
+
+    glEnable(GL_DEPTH_TEST);
+    glViewport(0, 0, WIN_SIZE[0], WIN_SIZE[1]);
 
 
 	//this func gives access to renderer class to glfw
@@ -161,6 +200,10 @@ Renderer::~Renderer()
 
 
 
+	if (library != nullptr) {
+		delete library;
+		library = nullptr;
+	}
 	glfwDestroyWindow(window);
 	glfwTerminate();
 }
@@ -170,7 +213,7 @@ void Renderer::run(std::function<void(float)> engineUpdate, std::function <void(
 	glfwSetScrollCallback(window,Renderer::scroll_callback);
 	glfwSetKeyCallback(window, Renderer::key_callback);
 
-	e_shader = std::make_unique<Shader>("src/rend/shaders/basic.vert","src/rend/shaders/basic.frag");
+	e_shader = std::make_unique<Shader>("../src/rend/shaders/basic.vert","../src/rend/shaders/basic.frag");
 	e_shader->Activate();
 
 

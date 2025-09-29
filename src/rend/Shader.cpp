@@ -25,23 +25,23 @@ Shader::Shader(const std::string vertexpath, const std::string fragpath)
 	try {
 		unsigned int vert_id, frag_id;
 
+		std::cout << "Loading vertex shader from: " << vertexpath << std::endl;
 		std::ifstream V_file_stream(vertexpath);
-		if (!V_file_stream)throw "AMAN > vert File cant opened [maybe not exixt wrong path]\n";
+		if (!V_file_stream) {
+			throw std::runtime_error("Failed to open vertex shader file: " + vertexpath);
+		}
 
-		//ek string ko stram karne layak container bana te hai
 		std::stringstream vertCache;
-		//fir us container me rdbuf ke Ascii conversion karke storekarte hai
 		vertCache << V_file_stream.rdbuf();
-		//fir woh opened file ko close kardete hai
 		V_file_stream.close();
-		//joh temp string container se hum copy karte hai to new std::string var (Usable)
 		std::string vertSource = vertCache.str();
 		const char* vertstr = vertSource.c_str();
 
-
-
+		std::cout << "Loading fragment shader from: " << fragpath << std::endl;
 		std::ifstream F_file_stream(fragpath);
-		if (!F_file_stream)throw "AMAN > frag File cant opened [maybe not exixt wrong path]\n";
+		if (!F_file_stream) {
+			throw std::runtime_error("Failed to open fragment shader file: " + fragpath);
+		}
 
 		std::stringstream fragCache;
 		fragCache << F_file_stream.rdbuf();
@@ -57,8 +57,12 @@ Shader::Shader(const std::string vertexpath, const std::string fragpath)
 		glShaderSource(frag_id, 1, &fragstr, nullptr);
 		glCompileShader(frag_id);
 
-		if (checkErrors(vert_id))throw "AMAN > VERTEX-Shader not Compiled Successfully !\n";
-		if (checkErrors(frag_id))throw "AMAN > FRAGMENT-Shader not Compiled Successfully !\n";
+		if (checkErrors(vert_id)) {
+			throw std::runtime_error("Vertex shader compilation failed");
+		}
+		if (checkErrors(frag_id)) {
+			throw std::runtime_error("Fragment shader compilation failed");
+		}
 
 
 		m_prog_id = glCreateProgram();
@@ -78,25 +82,25 @@ Shader::Shader(const std::string vertexpath, const std::string fragpath)
 			if (m_view_loc == -1)throw "SHADER > View mat defination not found\n";
 
 			m_pers_loc = glGetUniformLocation(m_prog_id, "ProjMatrix");
-			if (m_pers_loc == -1)throw "SHADER > Perspective mat defination not found\n";
+			if (m_pers_loc == -1) {
+				throw std::runtime_error("Perspective matrix definition not found");
+			}
+
+			glUseProgram(0);
+			std::cout << "[DEBUG]=> Shader Loaded !\n";
 		}
-		catch (std::string Uerr) {
-			std::cout << Uerr;
+		catch (const std::runtime_error& e) {
+			std::cerr << "Shader error: " << e.what() << std::endl;
+			throw;
 		}
-
-
-
-		glUseProgram(0);
-		std::cout << "[DEBUG]=> Shader Loaded !\n";
 	}
-	catch (const char* Error) {
-		std::cout << Error;
-		//some handling logic
+	catch (const std::exception& e) {
+		std::cerr << "Error: " << e.what() << std::endl;
+		throw;
 	}
-	
 }
 
-void Shader::upload2GPU(matrix_type type,const float* Value)
+void Shader::upload2GPU(matrix_type type, const float* Value)
 {
 	switch (type)
 	{
